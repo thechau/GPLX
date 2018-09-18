@@ -1,0 +1,111 @@
+1||BIỂN BÁO CẤM|
+0|101|ĐƯỜNG CẤM|
+0|102|CẤM ĐI NGƯỢC CHIỀU|
+0|103a|CẤM ÔTÔ|
+0|104|CẤM MÔTÔ|
+0|105|CẤM ÔTÔ VÀ MÔTÔ|
+0|106a|CẤM XE TẢI|
+0|107|CẤM ÔTÔ KHÁCH VÀ ÔTÔ TẢI|
+0|108|CẤM ÔTÔ KÉO RƠ MÓC|
+0|109|CẤM MÁY KÉO|
+0|110a|CẤM XE ĐẠP|
+0|112|CẤM NGƯỜI ĐI BỘ|226, 227, 228
+0|115|HẠN CHẾ TRỌNG LƯỢNG XE|
+0|116|HẠN CHẾ TRỌNG LƯỢNG TRÊN TRỤC XE|
+0|117|HẠN CHẾ CHIỀU CAO|
+0|120|HẠN CHẾ CHIỀU DÀI ÔTÔ KÉO MOÓC|
+0|121|CỰ LY TỐI THIỂU GIỮA HAI XE|
+0|122|DỪNG LẠI|
+0|123a|CẤM RẺ TRÁI|
+0|124a|CẤM QUAY ĐẦU|
+0|125|CẤM VƯỢT|
+0|126|CẤM ÔTÔ TẢI VƯỢT|
+0|128|CẤM BÓP CÒI|
+0|130|CẤM DỪNG VÀ ĐỖ XE|
+0|131a|CẤM ĐỖ XE|
+0|132|NHƯỜNG CHO XE NGƯỢC CHIỀU QUA ĐƯỜNG HẸP|
+0|133|HẾT CẤM VƯỢT|
+0|134|HẾT HẠN CHẾ TỐC ĐỘ TỐI ĐA|
+0|135|HẾT TẤT CẢ CÁC LỆNH CẤM|
+1||BIỂN BÁO NGUY HIỂM|
+0|203a|ĐƯỜNG BỊ HẸP CẢ HAI BÊN|
+0|203b|ĐƯỜNG BỊ HẸP BÊN TRÁI|
+0|203c|ĐƯỜNG BỊ HẸP BÊN PHẢI|
+0|204|ĐƯỜNG HAI CHIỀU|
+0|205a|NƠI GIAO NHAU CỦA ĐƯỜNG ĐỒNG CẤP|
+0|205b|NƠI GIAO NHAU CỦA ĐƯỜNG ĐỒNG CẤP|
+0|205c|NƠI GIAO NHAU CỦA ĐƯỜNG ĐỒNG CẤP|
+0|207a|GIAO NHAU VỚI ĐƯỜNG KHÔNG ƯU TIÊN|
+0|208|GIAO NHAU VỚI ĐƯỜNG ƯU TIÊN|
+0|209|GIAO NHAU CÓ TÍN HIỆU ĐÈN|
+0|210|GIAO NHAU VỚI ĐƯỜNG SẮT CÓ RÀO CHẮN|
+0|211a|GIAO NHAU VỚI ĐƯỜNG SẮT KHÔNG CÓ RÀO CHẮN|
+0|218|CỬA CHUI|
+0|220|DỐC LÊN NGUY HIỂM|
+0|222a|ĐƯỜNG TRƠN|
+0|224|ĐƯỜNG NGƯỜI ĐI BỘ CẮT NGANG|
+0|226|ĐƯỜNG NGƯỜI ĐI XE ĐẠP CẮT NGANG|
+0|234|GIAO NHAU VỚI ĐƯỜNG HAI CHIỀU|
+0|235|ĐƯỜNG ĐÔI|
+0|236|HẾT ĐƯỜNG ĐÔI|
+0|237|ĐƯỜNG CÓ ĐỘ VÒNG LỚN|
+0|238|ĐƯỜNG CAO TỐC PHÍA TRƯỚC|
+0|240|ĐƯỜNG HẦM PHÍA TRƯỚC|
+0|242a|NƠI ĐƯỜNG SẮT GIAO VUÔNG GÓC VỚI ĐƯỜNG BỘ|
+0|244|ĐOẠN ĐƯỜNG HAY XẢY RA TAI NẠN|
+0|246a|CHÚ Ý CHƯỚNG NGẠI VẬT PHÍA TRƯỚC|
+0|246b|CHÚ Ý CHƯỚNG NGẠI VẬT PHÍA TRƯỚC|
+0|246c|CHÚ Ý CHƯỚNG NGẠI VẬT PHÍA TRƯỚC|
+1||BIỂN BÁO HIỆU LỆNH|
+0|301a|CÁC XE CHỈ ĐƯỢC ĐI THẲNG|
+0|301b|HƯỚNG ĐI PHẢI PHẢI THEO|
+0|301e|CÁC XE CHỈ ĐƯỢC RẼ TRÁI|
+0|301i|CÁC XE CHỈ ĐƯỢC RẼ TRÁI VÀ PHẢI|
+0|301f|CÁC XE CHỈ ĐƯỢC ĐI THẲNG VÀ RẼ PHẢI|
+0|301h|CÁC XE CHỈ ĐƯỢC ĐI THẲNG VÀ RẼ TRÁI|
+0|304|ĐƯỜNG DÀNH CHO XE THÔ SƠ|
+0|305|ĐƯỜNG DÀNH CHO NGƯỜI ĐI BỘ|
+0|307|HẾT HẠN CHẾ TỐC ĐỘ TỐI THIỂU|
+0|308a|TUYẾN ĐƯỜNG CẦU VƯỢT CẮT QUA|
+0|308b|TUYẾN ĐƯỜNG CẦU VƯỢT CẮT QUA|
+1||BIỂN BÁO CHỈ DẪN|
+0|401|ĐƯỜNG ƯU TIÊN|
+0|402|HẾT ĐOẠN ĐƯỜNG ƯU TIÊN|
+0|403a|ĐƯỜNG DÀNH CHO ÔTÔ|
+0|403b|ĐƯỜNG DÀNH CHO ÔTÔ VÀ MÔTÔ|
+0|404a|HẾT ĐƯỜNG DÀNH CHO ÔTÔ|
+0|404b|HẾT ĐƯỜNG DÀNH CHO ÔTÔ VÀ MÔTÔ|
+0|406|ĐƯỢC ƯU TIÊN QUA ĐƯỜNG HẸP|
+0|407a|ĐƯỜNG MỘT CHIỀU|
+0|410|KHU VỰC QUAY XE|
+0|411|HƯỚNG ĐI THEO VẠCH KẺ ĐƯỜNG|
+0|412a|LÀN DÀNH CHO XE KHÁCH|
+0|413a|ĐƯỜNG CÓ LÀN DÀNH CHO XE KHÁCH|
+0|413b|RẼ RA ĐƯỜNG CÓ LÀN DÀNH CHO XE KHÁCH|
+0|413c|RẼ RA ĐƯỜNG CÓ LÀN DÀNH CHO XE KHÁCH|
+0|437|ĐƯỜNG CAO TỐC|
+0|438|HẾT ĐƯỜNG CAO TỐC|
+0|439|TỐC ĐỘ CHO PHÉP CHẠY TRÊN ĐƯỜNG CAO TỐC|
+0|446|ĐƯỜNG DÀNH CHO NGƯỜI TÀN TẬT|
+0|447a|CẦU VƯỢT LIÊN THÔNG|
+0|447b|CẦU VƯỢT LIÊN THÔNG|
+1||BIỂN BÁO PHỤ|
+0|501|PHẠM VI TÁC DỤNG CỦA BIỂN|
+0|502|KHOẢNG CÁCH ĐẾN ĐỐI TƯỢNG BÁO HIỆU|
+0|503a|HƯỚNG TÁC DỤNG CỦA BIỂN|
+0|503b|HƯỚNG TÁC DỤNG CỦA BIỂN|
+0|503c|HƯỚNG TÁC DỤNG CỦA BIỂN|
+0|503d|HƯỚNG TÁC DỤNG CỦA BIỂN|
+0|503e|HƯỚNG TÁC DỤNG CỦA BIỂN|
+0|503f|HƯỚNG TÁC DỤNG CỦA BIỂN|
+0|506a|HƯỚNG ĐƯỜNG ƯU TIÊN|
+0|506b|HƯỚNG ĐƯỜNG ƯU TIÊN|
+1||BIỂN BÁO HIỆU TRÊN CÁC TUYẾN ĐỐI NGOẠI|
+0|E9a|CẤM ĐỖ XE|
+0|E9b|CẤM ĐỖ XE THEO GIỜ|
+0|E9c|KHU VỰC ĐỖ XE|
+0|E9d|HẠN CHẾ TỐC ĐỘ TỐI ĐA|
+0|E10a|HẾT HIỆU LỰC CẤM ĐỖ XE|
+0|E10b|HẾT HIỆU LỰC CẤM ĐỖ XE THEO GIỜ|
+0|E10c|HẾT HIỆU LỰC KHU VỰC ĐỖ XE|
+0|E10d|HẾT HIỆU LỰC HẠN CHẾ TỐC ĐỘ TỐI ĐA|

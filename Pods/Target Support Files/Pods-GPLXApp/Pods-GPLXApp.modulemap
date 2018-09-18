@@ -1,0 +1,6 @@
+framework module Pods_GPLXApp {
+  umbrella header "Pods-GPLXApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

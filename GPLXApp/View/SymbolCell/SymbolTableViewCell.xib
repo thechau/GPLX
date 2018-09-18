@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SymbolTableViewCell" rowHeight="90" id="394-OF-9VD" customClass="SymbolTableViewCell" customModule="GPLXApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="399" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="394-OF-9VD" id="jTo-gv-hha">
+                <rect key="frame" x="0.0" y="0.0" width="399" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_temp-1" translatesAutoresizingMaskIntoConstraints="NO" id="fqh-lj-zaN">
+                        <rect key="frame" x="20" y="5" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="cFH-y5-PlS"/>
+                            <constraint firstAttribute="height" constant="80" id="zeH-OG-o30"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mục đichs cho viec demo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqb-Fn-06X">
+                        <rect key="frame" x="120" y="34" width="184" height="18"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hinh 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Te9-ki-4hM">
+                        <rect key="frame" x="120" y="5" width="51" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.31372549020000001" green="0.70588235290000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eqb-Fn-06X" firstAttribute="leading" secondItem="Te9-ki-4hM" secondAttribute="leading" id="4c1-Ke-3Ad"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="eqb-Fn-06X" secondAttribute="trailing" constant="8" id="77s-or-zKi"/>
+                    <constraint firstItem="Te9-ki-4hM" firstAttribute="top" secondItem="fqh-lj-zaN" secondAttribute="top" id="F8W-nd-ByR"/>
+                    <constraint firstItem="fqh-lj-zaN" firstAttribute="centerY" secondItem="jTo-gv-hha" secondAttribute="centerY" id="JWH-wx-aSO"/>
+                    <constraint firstItem="eqb-Fn-06X" firstAttribute="top" secondItem="Te9-ki-4hM" secondAttribute="bottom" constant="8" id="OAZ-H3-QMy"/>
+                    <constraint firstItem="fqh-lj-zaN" firstAttribute="leading" secondItem="jTo-gv-hha" secondAttribute="leading" constant="20" id="R7O-dx-KZ8"/>
+                    <constraint firstItem="Te9-ki-4hM" firstAttribute="leading" secondItem="fqh-lj-zaN" secondAttribute="trailing" constant="20" id="tAd-nQ-Oi5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgSymbol" destination="fqh-lj-zaN" id="wDC-A1-jAr"/>
+                <outlet property="lbDescription" destination="eqb-Fn-06X" id="iY5-1m-oL1"/>
+                <outlet property="lbNameSymbol" destination="Te9-ki-4hM" id="3uC-k3-1WX"/>
+            </connections>
+            <point key="canvasLocation" x="58.5" y="-22"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ico_temp-1" width="720" height="720"/>
+    </resources>
+</document>
