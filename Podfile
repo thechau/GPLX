@@ -6,6 +6,7 @@ target 'GPLXApp' do
   use_frameworks!
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
+    pod 'Google-Mobile-Ads-SDK'
   # Pods for GPLXApp
 
 end
