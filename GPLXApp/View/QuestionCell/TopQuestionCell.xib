@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,11 +19,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Do7-4o-qSM">
-                        <rect key="frame" x="0.0" y="0.0" width="903" height="44"/>
+                        <rect key="frame" x="7" y="7" width="889" height="30"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Câu  1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RW-cB-SPN">
-                                <rect key="frame" x="427" y="11" width="49" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <rect key="frame" x="417.5" y="3" width="54.5" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -37,11 +36,12 @@
                     </view>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Do7-4o-qSM" secondAttribute="bottom" id="F5T-mO-cl3"/>
-                <constraint firstItem="Do7-4o-qSM" firstAttribute="leading" secondItem="3by-Yn-QKg" secondAttribute="leading" id="PBk-Oa-1td"/>
-                <constraint firstAttribute="trailing" secondItem="Do7-4o-qSM" secondAttribute="trailing" id="g3I-y6-lxT"/>
-                <constraint firstItem="Do7-4o-qSM" firstAttribute="top" secondItem="3by-Yn-QKg" secondAttribute="top" id="l1b-ZM-iZw"/>
+                <constraint firstAttribute="trailing" secondItem="Do7-4o-qSM" secondAttribute="trailing" constant="7" id="Nkw-Dm-sW3"/>
+                <constraint firstAttribute="bottom" secondItem="Do7-4o-qSM" secondAttribute="bottom" constant="7" id="QsQ-KT-74S"/>
+                <constraint firstItem="Do7-4o-qSM" firstAttribute="top" secondItem="3by-Yn-QKg" secondAttribute="top" constant="7" id="UjV-DF-H0k"/>
+                <constraint firstItem="Do7-4o-qSM" firstAttribute="leading" secondItem="3by-Yn-QKg" secondAttribute="leading" constant="7" id="zA9-g8-LLn"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="oWn-u3-adn"/>
             <size key="customSize" width="903" height="44"/>
