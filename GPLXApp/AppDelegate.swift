@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
+import Realm
+import GoogleMobileAds
+import StoreKit
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -19,8 +24,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.statusBarStyle = .lightContent
         UINavigationBar.appearance().barTintColor = hexStringToUIColor(hex: "3b5998")
         UINavigationBar.appearance().tintColor = UIColor.white
+        
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-3940256099942544~1458002511")
+        
+        let lastVersion = 14
+        var oldVersion = 0
+        if let oldVer = LocalStorage.getValueWithKey(key: "lasted_db_version_number") as? Int {
+            oldVersion = oldVer
+        }
+        
+        if oldVersion < lastVersion {
+            LocalStorage.saveDataInLocalStorage(data: lastVersion as AnyObject, key: "lasted_db_version_number")
+            let defaultPath = Realm.Configuration.defaultConfiguration.fileURL
+            if let _ = defaultPath{
+                do {
+                    let _ = try FileManager.default.removeItem(at: defaultPath!)
+                    LocalStorage.saveDataInLocalStorage(data: "check_lastest" as AnyObject, key: "db_version_number")
+                } catch {
+                    //handle error
+                    print(error)
+                }
+            }
+            
+        }
 //        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font:UIColor.white]
         return true
+    }
+    
+    func requestReview(){
+        //SKStoreReviewController.requestReview()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

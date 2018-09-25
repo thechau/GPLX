@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -137,6 +136,7 @@
                 <outlet property="lbNameQuestion" destination="eDH-dR-r2A" id="m7x-3G-adL"/>
                 <outlet property="lbNumberCorrect" destination="3RL-cD-dtg" id="vGe-T6-J4z"/>
                 <outlet property="lbNumberWrong" destination="tnk-qx-tw7" id="xik-jY-sax"/>
+                <outlet property="vwBackground" destination="JzH-V8-bz8" id="Urw-z8-4mJ"/>
                 <outlet property="vwCover" destination="881-9V-MMb" id="Dol-ZA-Usn"/>
             </connections>
             <point key="canvasLocation" x="-130.5" y="-208"/>

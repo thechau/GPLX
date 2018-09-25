@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import Realm
+import RealmSwift
 
-struct QuestionModel {
+struct QuestionModel: RealmCollectionValue {
     var label: String
     var image : String
     var answer : [String] = []
-    var correctlyAnswer : Int
+    var correctlyAnswer : [String]
+    var correctlyChoose : [String]
 }

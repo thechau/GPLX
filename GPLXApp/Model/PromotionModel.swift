@@ -8,9 +8,12 @@
 
 import Foundation
 
-struct PromotionModel{
-    var name: String
-    var description: String
+struct PromotionModel: Decodable{
+    var title: String
+    var content: String
     var link: String
-    var image: String
+}
+
+struct ParsePromotionModel: Decodable{
+    var data : [PromotionModel]
 }

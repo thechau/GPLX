@@ -37,3 +37,12 @@ extension ReviewQuestionViewController: UITableViewDataSource{
         return cell
     }
 }
+
+extension ReviewQuestionViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "QuestionsViewController") as! QuestionsViewController
+        vc.idReview = indexPath.row + 1
+        vc.checked = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}

@@ -11,7 +11,7 @@ import WebKit
 
 class SAPhotosViewController: UIViewController {
 
-    @IBOutlet weak var WbView: WKWebView!
+    @IBOutlet weak var WbView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
         loadContents()
@@ -19,8 +19,21 @@ class SAPhotosViewController: UIViewController {
     }
 
     func loadContents(){
-        let url = Bundle.main.url(forResource: "SA_Contents", withExtension: "html")
-        WbView.load(URLRequest(url: url!))
+        do {
+            guard let filePath = Bundle.main.path(forResource: "SA_Contents", ofType: "html")
+                else {
+                    // File Error
+                    print ("File reading error")
+                    return
+            }
+            
+            let contents =  try String(contentsOfFile: filePath, encoding: .utf8)
+            let baseUrl = URL(fileURLWithPath: filePath)
+            WbView.loadHTMLString(contents as String, baseURL: baseUrl)
+        }
+        catch {
+            print ("File HTML error")
+        }
     }
 
 }

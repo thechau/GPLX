@@ -7,11 +7,12 @@
 //
 
 import UIKit
-import RxSwift
+//import RxSwift
 class MainController: BaseViewController {
     @IBOutlet weak var tbView: UITableView!
+    
     var model = MainViewModel()
-    let disposeBag = DisposeBag()
+    //let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,16 +21,33 @@ class MainController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if let _ = LocalStorage.getValueWithKey(key: "rated"){
+//            let appdelegate = AppDelegate()
+//            appdelegate.requestReview()
+            LocalStorage.saveDataInLocalStorage(data: "done" as AnyObject, key: "rated")
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Luyện Thi"
+        
+    }
+    
     func setUpRx(){
-        model.data.asObservable()
-            .subscribe(onNext: { //2
-                data in
-                self.tbView.reloadData()
-            })
-            .disposed(by: disposeBag) //3
+        self.tbView.reloadData()
+//        model.data.asObservable()
+//            .subscribe(onNext: { //2
+//                data in
+//            })
+//            .disposed(by: disposeBag) //3
     }
     
     func setUpTable(){
+        tbView.separatorColor = .clear
         tbView.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: MainTableViewCell.reuseIdentifier)
     }
 
@@ -48,6 +66,7 @@ extension MainController: UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.reuseIdentifier, for: indexPath) as! MainTableViewCell
         let data = model.dataAtIndex(index: indexPath.row)
         cell.data = data
+        cell.selectionStyle = .none
         return cell
     }
 }
@@ -59,31 +78,34 @@ extension MainController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 3:
+        case 1:
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "QuestionGroupViewController") as! QuestionGroupViewController
             self.navigationController?.pushViewController(vc, animated: true)
         case 4:
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "ListSymbolViewController") as! ListSymbolViewController
             self.navigationController?.pushViewController(vc, animated: true)
         case 2:
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ListSymbolViewController") as! ListSymbolViewController
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ReviewQuestionViewController") as! ReviewQuestionViewController
             self.navigationController?.pushViewController(vc, animated: true)
-        case 1:
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ListSymbolViewController") as! ListSymbolViewController
+        case 3:
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "QuestionsViewController") as! QuestionsViewController
+            vc.checked = true
+            vc.isReviewWroingQuestion = true
             self.navigationController?.pushViewController(vc, animated: true)
         case 7:
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "PromotionViewController") as! PromotionViewController
             self.navigationController?.pushViewController(vc, animated: true)
-        case 6:
+        case 5:
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "TrickViewController") as! TrickViewController
             self.navigationController?.pushViewController(vc, animated: true)
-        case 5:
+        case 6:
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "SAPhotosViewController") as! SAPhotosViewController
             self.navigationController?.pushViewController(vc, animated: true)
         case 0:
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "QuestionsViewController") as! QuestionsViewController
             let timer = Timer()
-            vc.timerModel = TimerCountDown(timer: timer)
+            vc.fromRandom = true
+            //vc.timerModel = TimerCountDown(timer: timer)
             vc.titles = model.dataAtIndex(index: indexPath.row).name
             self.navigationController?.pushViewController(vc, animated: true)
         default:

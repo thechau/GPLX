@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,7 +33,7 @@
                                 <color key="textColor" red="0.31372549020000001" green="0.70588235290000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ov8-0x-UGa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ov8-0x-UGa">
                                 <rect key="frame" x="20" y="50" width="398" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="gkX-Ef-ozT"/>
@@ -46,15 +45,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kCM-ct-LdU">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="90f-Ci-QoL">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04m-23-KVC" customClass="CheckBox" customModule="GPLXApp" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="30" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="Q2a-8f-kyA"/>
-                                                    <constraint firstAttribute="height" constant="30" id="hEq-IO-XK4"/>
+                                                    <constraint firstAttribute="height" constant="30" id="RiQ-Ej-QyF"/>
+                                                    <constraint firstAttribute="width" constant="30" id="kYH-rm-g2c"/>
                                                 </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trả lời 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQ9-Wm-Njh">
-                                                <rect key="frame" x="53" y="13" width="55" height="29"/>
+                                                <state key="normal" image="img_checked"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQ9-Wm-Njh" customClass="UILabelChecked" customModule="GPLXApp" customModuleProvider="target">
+                                                <rect key="frame" x="42" y="13" width="0.0" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -62,26 +62,28 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="90f-Ci-QoL" firstAttribute="top" secondItem="kCM-ct-LdU" secondAttribute="top" constant="8" id="Bpl-s1-wt5"/>
+                                            <constraint firstItem="04m-23-KVC" firstAttribute="top" secondItem="kCM-ct-LdU" secondAttribute="top" constant="8" id="5Fj-xB-Cz5"/>
                                             <constraint firstItem="sQ9-Wm-Njh" firstAttribute="top" secondItem="kCM-ct-LdU" secondAttribute="top" constant="13" id="Go8-ry-OlO"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sQ9-Wm-Njh" secondAttribute="trailing" constant="20" id="czI-GK-1oh"/>
-                                            <constraint firstItem="90f-Ci-QoL" firstAttribute="leading" secondItem="kCM-ct-LdU" secondAttribute="leading" constant="8" id="e5J-4R-aeG"/>
+                                            <constraint firstItem="sQ9-Wm-Njh" firstAttribute="leading" secondItem="04m-23-KVC" secondAttribute="trailing" constant="4" id="hPm-zr-xpf"/>
+                                            <constraint firstItem="04m-23-KVC" firstAttribute="leading" secondItem="kCM-ct-LdU" secondAttribute="leading" constant="8" id="js2-ES-kig"/>
                                             <constraint firstAttribute="bottom" secondItem="sQ9-Wm-Njh" secondAttribute="bottom" constant="8" id="qG9-WL-cV2"/>
-                                            <constraint firstItem="sQ9-Wm-Njh" firstAttribute="leading" secondItem="90f-Ci-QoL" secondAttribute="trailing" constant="15" id="yWo-mE-qHu"/>
+                                            <constraint firstAttribute="bottom" secondItem="04m-23-KVC" secondAttribute="bottom" constant="12" id="xdC-ho-TZF"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8J-LD-PSd">
                                         <rect key="frame" x="0.0" y="55" width="398" height="50"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fOE-J6-Szx">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJo-k1-fzj" customClass="CheckBox" customModule="GPLXApp" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="30" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="Nlf-47-zlq"/>
-                                                    <constraint firstAttribute="height" constant="30" id="Peg-19-lyL"/>
+                                                    <constraint firstAttribute="width" constant="30" id="1lp-0w-A9X"/>
+                                                    <constraint firstAttribute="height" constant="30" id="Vjg-3f-Wgw"/>
                                                 </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trả lời 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RT-kB-YO1">
-                                                <rect key="frame" x="53" y="13" width="61" height="29"/>
+                                                <state key="normal" image="img_checked"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RT-kB-YO1" customClass="UILabelChecked" customModule="GPLXApp" customModuleProvider="target">
+                                                <rect key="frame" x="42" y="13" width="0.0" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -89,26 +91,28 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="fOE-J6-Szx" firstAttribute="top" secondItem="R8J-LD-PSd" secondAttribute="top" constant="8" id="1M5-ce-7lu"/>
                                             <constraint firstAttribute="bottom" secondItem="6RT-kB-YO1" secondAttribute="bottom" constant="8" id="399-0F-MXS"/>
+                                            <constraint firstItem="qJo-k1-fzj" firstAttribute="leading" secondItem="R8J-LD-PSd" secondAttribute="leading" constant="8" id="Mbz-0S-3RG"/>
                                             <constraint firstItem="6RT-kB-YO1" firstAttribute="top" secondItem="R8J-LD-PSd" secondAttribute="top" constant="13" id="Nd3-O3-qmV"/>
+                                            <constraint firstAttribute="bottom" secondItem="qJo-k1-fzj" secondAttribute="bottom" constant="12" id="WRJ-Pc-7kz"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6RT-kB-YO1" secondAttribute="trailing" constant="20" id="aTD-d3-K5i"/>
-                                            <constraint firstItem="fOE-J6-Szx" firstAttribute="leading" secondItem="R8J-LD-PSd" secondAttribute="leading" constant="8" id="qDi-4a-ykv"/>
-                                            <constraint firstItem="6RT-kB-YO1" firstAttribute="leading" secondItem="fOE-J6-Szx" secondAttribute="trailing" constant="15" id="qMy-pR-zbY"/>
+                                            <constraint firstItem="qJo-k1-fzj" firstAttribute="top" secondItem="R8J-LD-PSd" secondAttribute="top" constant="8" id="fVL-ve-vaF"/>
+                                            <constraint firstItem="6RT-kB-YO1" firstAttribute="leading" secondItem="qJo-k1-fzj" secondAttribute="trailing" constant="4" id="sTl-Aj-VYi"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXK-sE-r1g">
                                         <rect key="frame" x="0.0" y="110" width="398" height="50"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ypW-b8-63j">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUY-JB-Pdp" customClass="CheckBox" customModule="GPLXApp" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="30" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Psb-wd-JJu"/>
-                                                    <constraint firstAttribute="width" constant="30" id="yKv-rj-5ir"/>
+                                                    <constraint firstAttribute="width" constant="30" id="CHt-ca-yxe"/>
+                                                    <constraint firstAttribute="height" constant="30" id="PCF-NV-pQj"/>
                                                 </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trả lời 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlL-Gs-M7J">
-                                                <rect key="frame" x="53" y="13" width="58" height="29"/>
+                                                <state key="normal" image="img_checked"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlL-Gs-M7J" customClass="UILabelChecked" customModule="GPLXApp" customModuleProvider="target">
+                                                <rect key="frame" x="42" y="13" width="0.0" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -117,25 +121,27 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KlL-Gs-M7J" secondAttribute="trailing" constant="20" id="7Aq-qc-5M5"/>
-                                            <constraint firstItem="KlL-Gs-M7J" firstAttribute="leading" secondItem="ypW-b8-63j" secondAttribute="trailing" constant="15" id="CaX-Db-gqG"/>
                                             <constraint firstAttribute="bottom" secondItem="KlL-Gs-M7J" secondAttribute="bottom" constant="8" id="Ddw-zZ-1DB"/>
-                                            <constraint firstItem="ypW-b8-63j" firstAttribute="top" secondItem="eXK-sE-r1g" secondAttribute="top" constant="8" id="fI4-Gg-3w8"/>
+                                            <constraint firstItem="KlL-Gs-M7J" firstAttribute="leading" secondItem="jUY-JB-Pdp" secondAttribute="trailing" constant="4" id="GBR-Md-Iyp"/>
+                                            <constraint firstItem="jUY-JB-Pdp" firstAttribute="leading" secondItem="eXK-sE-r1g" secondAttribute="leading" constant="8" id="PWO-c5-Ff9"/>
+                                            <constraint firstAttribute="bottom" secondItem="jUY-JB-Pdp" secondAttribute="bottom" constant="12" id="arw-9w-z4Z"/>
+                                            <constraint firstItem="jUY-JB-Pdp" firstAttribute="top" secondItem="eXK-sE-r1g" secondAttribute="top" constant="8" id="otC-Pk-ocR"/>
                                             <constraint firstItem="KlL-Gs-M7J" firstAttribute="top" secondItem="eXK-sE-r1g" secondAttribute="top" constant="13" id="qK0-M7-Jtk"/>
-                                            <constraint firstItem="ypW-b8-63j" firstAttribute="leading" secondItem="eXK-sE-r1g" secondAttribute="leading" constant="8" id="rtV-Dh-QS5"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6n-f7-Xbg">
                                         <rect key="frame" x="0.0" y="165" width="398" height="50"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x8Y-si-4MU">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eE-ib-vof" customClass="CheckBox" customModule="GPLXApp" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="30" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="1d2-Gf-5F3"/>
-                                                    <constraint firstAttribute="width" constant="30" id="OJa-zU-ccS"/>
+                                                    <constraint firstAttribute="height" constant="30" id="IM1-4b-hdW"/>
+                                                    <constraint firstAttribute="width" constant="30" id="dZD-Ms-COD"/>
                                                 </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="trả lời 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQR-nw-lW3">
-                                                <rect key="frame" x="53" y="13" width="58" height="29"/>
+                                                <state key="normal" image="img_checked"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQR-nw-lW3" customClass="UILabelChecked" customModule="GPLXApp" customModuleProvider="target">
+                                                <rect key="frame" x="42" y="13" width="0.0" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -143,12 +149,13 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="x8Y-si-4MU" firstAttribute="top" secondItem="N6n-f7-Xbg" secondAttribute="top" constant="8" id="0vk-7t-m2d"/>
                                             <constraint firstItem="jQR-nw-lW3" firstAttribute="top" secondItem="N6n-f7-Xbg" secondAttribute="top" constant="13" id="8g1-FX-YyT"/>
+                                            <constraint firstItem="0eE-ib-vof" firstAttribute="leading" secondItem="N6n-f7-Xbg" secondAttribute="leading" constant="8" id="FhL-LM-E3C"/>
+                                            <constraint firstAttribute="bottom" secondItem="0eE-ib-vof" secondAttribute="bottom" constant="12" id="Teu-FL-eYa"/>
                                             <constraint firstAttribute="bottom" secondItem="jQR-nw-lW3" secondAttribute="bottom" constant="8" id="ZbP-3B-KR9"/>
-                                            <constraint firstItem="jQR-nw-lW3" firstAttribute="leading" secondItem="x8Y-si-4MU" secondAttribute="trailing" constant="15" id="bkK-8c-apL"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jQR-nw-lW3" secondAttribute="trailing" constant="20" id="ejS-Ff-Msf"/>
-                                            <constraint firstItem="x8Y-si-4MU" firstAttribute="leading" secondItem="N6n-f7-Xbg" secondAttribute="leading" constant="8" id="tIm-rS-xSF"/>
+                                            <constraint firstItem="0eE-ib-vof" firstAttribute="top" secondItem="N6n-f7-Xbg" secondAttribute="top" constant="8" id="lPW-iK-IVz"/>
+                                            <constraint firstItem="jQR-nw-lW3" firstAttribute="leading" secondItem="0eE-ib-vof" secondAttribute="trailing" constant="4" id="okB-T2-FVw"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -180,16 +187,18 @@
             <viewLayoutGuide key="safeArea" id="oGr-px-LuU"/>
             <size key="customSize" width="438" height="490"/>
             <connections>
+                <outlet property="constraintBottomOfImage" destination="Enk-qj-5Ka" id="AMz-dv-GFd"/>
+                <outlet property="constraintForHeightOfImage" destination="gkX-Ef-ozT" id="nVh-CO-vjz"/>
                 <outlet property="imgQuestion" destination="ov8-0x-UGa" id="RuO-TL-T5s"/>
                 <outlet property="lbAnswer1" destination="sQ9-Wm-Njh" id="ERm-mG-iyC"/>
                 <outlet property="lbAnswer2" destination="6RT-kB-YO1" id="5u9-aZ-OUQ"/>
                 <outlet property="lbAnswer3" destination="KlL-Gs-M7J" id="wWf-LE-nCd"/>
                 <outlet property="lbAnswer4" destination="jQR-nw-lW3" id="ZiF-yp-3T2"/>
                 <outlet property="lbQuestion" destination="4SR-JZ-t62" id="quw-4i-uFZ"/>
-                <outlet property="radio_asw1" destination="90f-Ci-QoL" id="KJl-zY-McV"/>
-                <outlet property="radio_asw2" destination="fOE-J6-Szx" id="TrH-lN-sAb"/>
-                <outlet property="radio_asw3" destination="ypW-b8-63j" id="7aB-AE-8pJ"/>
-                <outlet property="radio_asw4" destination="x8Y-si-4MU" id="fz5-qT-8BE"/>
+                <outlet property="radio_asw1" destination="04m-23-KVC" id="Dza-0J-heL"/>
+                <outlet property="radio_asw2" destination="qJo-k1-fzj" id="Bb5-si-8d8"/>
+                <outlet property="radio_asw3" destination="jUY-JB-Pdp" id="EC7-IV-lKl"/>
+                <outlet property="radio_asw4" destination="0eE-ib-vof" id="634-Qe-nqK"/>
                 <outlet property="vwAnswer1" destination="kCM-ct-LdU" id="bh2-3o-vC5"/>
                 <outlet property="vwAnswer2" destination="R8J-LD-PSd" id="nW3-Ay-u53"/>
                 <outlet property="vwAnswer3" destination="eXK-sE-r1g" id="TZ2-hn-R7o"/>
@@ -198,4 +207,7 @@
             <point key="canvasLocation" x="-137" y="-288"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="img_checked" width="112" height="112"/>
+    </resources>
 </document>

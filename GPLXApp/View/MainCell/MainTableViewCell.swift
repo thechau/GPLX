@@ -40,6 +40,8 @@ class MainTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        imgBackground.setBorderColor(borderWidth: 0.5, borderCorlor: "cccccc")
+        imgBackground.setConerRaiousFollowWidth(width: 5)
         // Initialization code
     }
     

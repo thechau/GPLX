@@ -16,7 +16,16 @@ class TopQuestionCollectionViewCell: UICollectionViewCell {
     }
     
     var data : AnswerModel? {
+        willSet{
+            lbTitle.isHidden = false
+        }
         didSet{
+            lbTitle.setShadow()
+            //self.vwBackground.setShadow()
+            if data!.index == 0{
+                lbTitle.isHidden = true
+                return
+            }
             lbTitle.text = "Câu \(data!.index)"
             vwBackground.backgroundColor = data!.color
         }

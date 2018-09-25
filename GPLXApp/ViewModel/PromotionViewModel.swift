@@ -10,8 +10,6 @@ import Foundation
 
 struct PromotionViewModel: Model{
     typealias T = PromotionModel
-    
-    var nameSection : String
     var data : [T] = []
     
     func amoutData() -> Int{
@@ -21,4 +19,21 @@ struct PromotionViewModel: Model{
     func dataAtIndex(index: Int) -> T{
         return data[index]
     }
+    
+    mutating func getData(completion: @escaping (_ _data: [T]) -> Void){
+        let urlString = "https://5ba9e39253adf70014d15c2b.mockapi.io/news"
+        let url = URL(string: urlString)
+        
+        URLSession.shared.dataTask(with: url!) { (datas, response, err ) in
+            guard let datas = datas else { return }
+            
+            do {
+                let datas =  try JSONDecoder().decode(ParsePromotionModel.self, from: datas)//.decode([PromotionModel.self], from: datas)
+                completion(datas.data)
+            }catch let json {
+                print(json)
+            }
+        }.resume()
+    }
+    //func 
 }

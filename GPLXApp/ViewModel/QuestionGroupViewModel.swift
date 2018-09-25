@@ -7,22 +7,30 @@
 //
 
 import Foundation
-import RxSwift
-import RxCocoa
+//import RxSwift
+//import RxCocoa
+import RealmSwift
+import Realm
 
 struct QuestionGroupViewModel {
-    var data = BehaviorRelay<[QuestionGroup]>(value: [QuestionGroup(name: "Bo de 1", numberCorrect: 10, numberWrong: 10, id: 1),
-                                                      QuestionGroup(name: "Bo de 1", numberCorrect: 10, numberWrong: 10, id: 1),
-                                                      QuestionGroup(name: "Bo de 1", numberCorrect: 10, numberWrong: 10, id: 1),
-                                                      QuestionGroup(name: "Bo de 1", numberCorrect: 10, numberWrong: 10, id: 1)])
+    var data : List<QuestionGroupSaved>  = DatabaseManager.getInstance.loadData(QuestionGroupSaved.self)
     
-    func dataAtIndex(index: Int) -> QuestionGroup{
-        return data.value[index]
+    func dataAtIndex(index: Int) -> QuestionGroupSaved?{
+        for record in data {
+            if record.identifier == index + 1{
+                return record
+            }
+        }
+        return nil
     }
     
-    
+    func clearData(){
+        for record in data{
+            DatabaseManager.getInstance.deleteData(object: record)
+        }
+    }
     
     func amountData() -> Int{
-        return data.value.count
+        return data.count
     }
 }
